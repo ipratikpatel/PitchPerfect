@@ -29,7 +29,6 @@ class PlaySoundsViewController: UIViewController {
     enum ButtonType: Int { case slow = 0, fast, chipmunk, vader, echo, reverb }
 
     @IBAction func playSoundForButton(_ sender: UIButton) {
-        print("play sound button pressed")
         switch(ButtonType(rawValue: sender.tag)!) {
         case .slow:
             playSound(rate: 0.5)
@@ -49,7 +48,6 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func stopSoundForButton(_ sender: UIButton) {
-        print("stop audio button pressed")
         stopAudio()
     }
     
